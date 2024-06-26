@@ -1,13 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-import 'package:cart/cart_proivder.dart';
+import 'package:cart/data/providers/cart_proivder.dart';
 
 class Cart extends StatelessWidget {
+  const Cart({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Cart')),
+      appBar: AppBar(title: const Text('Cart')),
       body: Consumer<CartProvider>(
         builder: (context, cartProvider, child) {
           return Column(
@@ -26,7 +28,7 @@ class Cart extends StatelessWidget {
                           child: Image.asset(cartProvider.cartItems[index].image),
                         ),
                         trailing: IconButton(
-                          icon: Icon(Icons.remove_shopping_cart),
+                          icon: const Icon(Icons.remove_shopping_cart),
                           onPressed: () {
                             cartProvider.removeFromCart(cartProvider.cartItems[index]);
                           },
@@ -40,7 +42,7 @@ class Cart extends StatelessWidget {
                 padding: const EdgeInsets.all(16.0),
                 child: Text(
                   'Total Price: Rs. ${cartProvider.totalPrice.toStringAsFixed(2)}',
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 20,
                   ),

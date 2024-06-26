@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:cart/datamodel.dart';
+import 'package:cart/data/model/datamodel.dart';
 
 class CartProvider with ChangeNotifier {
-  List<ItemDataModel> _cartItems = [];
+  final List<ItemDataModel> _cartItems = [];
 
   List<ItemDataModel> get cartItems => _cartItems;
 

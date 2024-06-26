@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import 'package:cart/homepage.dart';
-import 'package:cart/cart_proivder.dart';
+import 'package:cart/presentation/pages/homepage.dart';
+import 'package:cart/data/providers/cart_proivder.dart';
 
 void main() {
   runApp(

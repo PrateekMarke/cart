@@ -3,15 +3,20 @@ class LoginDataModel {
   String password;
   LoginDataModel({required this.email, required this.password});
 }
+
 class SignDataMOdel {
-  
   String first;
   String last;
   String confirmpass;
   String phone;
 
-  SignDataMOdel({required this.confirmpass, required this.first, required this.last, required this.phone});
+  SignDataMOdel(
+      {required this.confirmpass,
+      required this.first,
+      required this.last,
+      required this.phone});
 }
+
 class ItemDataModel {
   final String name;
   final String image;
@@ -25,5 +30,3 @@ class ItemDataModel {
     required this.desc,
   });
 }
-
-

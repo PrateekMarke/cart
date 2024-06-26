@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:cart/datamodel.dart';
+import 'package:cart/data/model/datamodel.dart';
 
 class ItemDetail extends StatelessWidget {
   final ItemDataModel itemDataModel;
 
-  const ItemDetail({Key? key, required this.itemDataModel}) : super(key: key);
+  const ItemDetail({super.key, required this.itemDataModel});
 
   @override
   Widget build(BuildContext context) {
@@ -19,15 +19,15 @@ class ItemDetail extends StatelessWidget {
                 width: 350,
                 height: 300,
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               Text(
-                'Price: Rs. ${itemDataModel.price.toStringAsFixed(2)}', // Formatting the double price
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                'Price: Rs. ${itemDataModel.price.toStringAsFixed(2)}', 
+                style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
               ),
-              SizedBox(height: 10),
+              const SizedBox(height: 10),
               Text(
                 itemDataModel.desc,
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
               )
             ],                                  
           ),
